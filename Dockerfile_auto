@@ -8,4 +8,8 @@ RUN pip install hanlp && \
 	# 北大中文
 	pip install pkuseg && \
 	# 清华中文
-	pip install thulac
+	pip install thulac && \
+	# 北大词性标注
+	cd ~ && mkdir .pkuseg && cd .pkuseg && mkdir postag && \
+	wget https://github.com/lancopku/pkuseg-python/releases/download/v0.0.16/postag.zip && \
+	unzip postag.zip -d postag
